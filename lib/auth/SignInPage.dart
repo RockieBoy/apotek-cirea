@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:mobile_app_apotik_cirea/validate/SignInSuccess.dart';
 
 
 class SignInPage extends StatelessWidget {
@@ -84,7 +85,6 @@ class SignInPage extends StatelessWidget {
                   ),
                   const SizedBox(height: 20),
                   TextField(
-                    
                     obscureText: true,
                     decoration: InputDecoration(
                       labelText: 'Password',
@@ -97,7 +97,10 @@ class SignInPage extends StatelessWidget {
                   Center(
                     child: ElevatedButton(
                       onPressed: () {
-                        // Aksi login
+                        Navigator.pushReplacement(context,
+                            MaterialPageRoute(builder: (context) {
+                          return SuccessSignIn();
+                        }));
                       },
                       style: ElevatedButton.styleFrom(
                         backgroundColor: const Color.fromRGBO(255, 178, 44, 1),
@@ -107,13 +110,14 @@ class SignInPage extends StatelessWidget {
                           borderRadius: BorderRadius.circular(10),
                         ),
                       ),
-                      child: const Text('Login', style: TextStyle(fontFamily: "Poppins", fontSize: 25, color: Colors.white),),
+                      child: const Text('Sign Up', style: TextStyle(fontFamily: "Poppins", fontSize: 25, color: Colors.white),),
                     ),
                   ),
                   const SizedBox(height: 10),
                   Center(
                     child: TextButton(
                       onPressed: () {
+                        
                       },
                       child: const Text(
                         'Forget Password?',

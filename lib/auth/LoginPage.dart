@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:mobile_app_apotik_cirea/Dashboard.dart';
 
 
 class LoginPage extends StatelessWidget {
@@ -79,7 +80,10 @@ class LoginPage extends StatelessWidget {
                   Center(
                     child: ElevatedButton(
                       onPressed: () {
-                        // Aksi login
+                        Navigator.pushReplacement(context,
+                            MaterialPageRoute(builder: (context) {
+                            return Dashboard();
+                        }));
                       },
                       style: ElevatedButton.styleFrom(
                         backgroundColor: const Color.fromRGBO(255, 178, 44, 1),
