@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:mobile_app_apotik_cirea/auth/FirstPage.dart';
+import 'package:mobile_app_apotik_cirea/KelolaObat.dart';
 
 class Dashboard extends StatelessWidget {
   Dashboard({super.key});
@@ -226,13 +227,18 @@ class Dashboard extends StatelessWidget {
                   const SizedBox(height: 20),
                   Center(
                     child: Card(
+                      elevation: 8,
                       color: const Color.fromRGBO(97, 94, 252, 1),
                       clipBehavior: Clip.hardEdge,
                       child: InkWell(
                         borderRadius: BorderRadius.circular(16),
                         splashColor: Colors.blueGrey,
-                        onTap: () {},
-                        
+                        onTap: () {
+                          Navigator.push(context,
+                          MaterialPageRoute(builder: (context) {
+                          return KelolaObat();
+                          }));
+                        },
                         child: const SizedBox(
                           width: 600,
                           height: 75,
@@ -276,6 +282,7 @@ class Dashboard extends StatelessWidget {
                   const SizedBox(height: 20),
                   Center(
                     child: Card(
+                      elevation: 8,
                       color: const Color.fromRGBO(175, 71, 210, 1),
                       clipBehavior: Clip.hardEdge,
                       child: InkWell(
@@ -324,6 +331,7 @@ class Dashboard extends StatelessWidget {
                   const SizedBox(height: 20),
                   Center(
                     child: Card(
+                      elevation: 8,
                       color: const Color.fromRGBO(255, 178, 44, 1),
                       clipBehavior: Clip.hardEdge,
                       child: InkWell(
@@ -372,6 +380,7 @@ class Dashboard extends StatelessWidget {
                   const SizedBox(height: 20),
                   Center(
                     child: Card(
+                      elevation: 8,
                       color:const Color.fromRGBO(64, 165, 120, 1),
                       clipBehavior: Clip.hardEdge,
                       child: InkWell(
@@ -430,6 +439,7 @@ class Dashboard extends StatelessWidget {
                   const SizedBox(height: 20,),
                   Center(
                     child: Card(
+                      elevation: 8,
                       color: const Color.fromRGBO(16, 203, 0, 1),
                       clipBehavior: Clip.hardEdge,
                       child: InkWell(
@@ -478,6 +488,7 @@ class Dashboard extends StatelessWidget {
                   const SizedBox(height: 20,),
                   Center(
                     child: Card(
+                      elevation: 8,
                       color:const Color.fromRGBO(5, 12, 156, 1),
                       clipBehavior: Clip.hardEdge,
                       child: InkWell(
