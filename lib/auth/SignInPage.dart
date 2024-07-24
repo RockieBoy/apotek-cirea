@@ -18,7 +18,7 @@ class SignInPage extends StatelessWidget {
                 child: Align(
                   alignment: Alignment.topLeft,
                   child: IconButton(
-                    icon: const Icon(Icons.arrow_back, color: Colors.white ),
+                    icon: const Icon(Icons.arrow_back_ios_new, color: Colors.white ),
                     onPressed: () {
                       Navigator.pop(context);
                     },
