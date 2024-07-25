@@ -307,14 +307,14 @@ class Dashboard extends StatelessWidget {
                                         CrossAxisAlignment.start,
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
-                                      Text('Kelola Barang',
+                                      Text('Kelola Barang Medis',
                                           style: TextStyle(
                                             color: Colors.white,
                                             fontSize: 18.0,
                                             fontWeight: FontWeight.bold,
                                           )),
                                       Text(
-                                        'Kelola semua hal terkait Barang',
+                                        'Kelola semua hal terkait Barang Medis',
                                         style: TextStyle(
                                           color: Colors.white,
                                           fontSize: 14.0,
@@ -356,14 +356,14 @@ class Dashboard extends StatelessWidget {
                                         CrossAxisAlignment.start,
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
-                                      Text('Kelola Perlengkapan',
+                                      Text('Kelola Barang Non Medis',
                                           style: TextStyle(
                                             color: Colors.white,
                                             fontSize: 18.0,
                                             fontWeight: FontWeight.bold,
                                           )),
                                       Text(
-                                        'Kelola semua hal terkait perlengkapan',
+                                        'Kelola semua hal terkait barang non medis',
                                         style: TextStyle(
                                           color: Colors.white,
                                           fontSize: 14.0,
