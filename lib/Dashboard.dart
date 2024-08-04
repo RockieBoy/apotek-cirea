@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:mobile_app_apotik_cirea/KelolaObat.dart';
 import 'package:mobile_app_apotik_cirea/account.dart';
-import 'package:mobile_app_apotik_cirea/auth/FirstPage.dart';
+import 'package:mobile_app_apotik_cirea/validate/LogoutValidate.dart';
 
 class Dashboard extends StatelessWidget {
   Dashboard({super.key});
@@ -54,9 +54,9 @@ class Dashboard extends StatelessWidget {
               leading: const Icon(Icons.logout),
               title: const Text('Logout'),
               onTap: () {
-                Navigator.pushReplacement(context,
+                Navigator.push(context,
                     MaterialPageRoute(builder: (context) {
-                  return const Homepage();
+                  return const LogoutValidate();
                 }));
               },
             ),

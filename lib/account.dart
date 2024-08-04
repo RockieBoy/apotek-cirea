@@ -1,10 +1,12 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+import 'package:mobile_app_apotik_cirea/editprofileaccount.dart';
+import 'package:mobile_app_apotik_cirea/profileaccount.dart';
+import 'package:mobile_app_apotik_cirea/validate/LogoutValidate.dart';
+
 
 
 class Account extends StatelessWidget {
-  Account({super.key});
+  const Account({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -144,17 +146,32 @@ class Account extends StatelessWidget {
                   ProfileButton(
                     icon: Icons.edit,
                     text: 'Ubah Profile',
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) {
+                        return EditProfileAccount();
+                      }));
+                    },
                   ),
                   ProfileButton(
                     icon: Icons.info,
                     text: 'Info Profile',
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) {
+                        return ProfileAccount();
+                      }));
+                    },
                   ),
                   ProfileButton(
                     icon: Icons.logout,
                     text: 'Logout',
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) {
+                        return LogoutValidate();
+                      }));
+                    },
                   ),
                 ],
               ),
@@ -170,7 +187,7 @@ class ProfileButton extends StatelessWidget {
   final String text;
   final VoidCallback onPressed;
 
-  ProfileButton(
+  const ProfileButton(
       {required this.icon, required this.text, required this.onPressed});
 
   @override
