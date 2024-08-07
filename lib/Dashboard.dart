@@ -2,8 +2,10 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:mobile_app_apotik_cirea/kelola_barang_medis/KelolaBarangMedis.dart';
+import 'package:mobile_app_apotik_cirea/kelola_barang_non_medis/KelolaBarangNonMedis.dart';
 import 'package:mobile_app_apotik_cirea/kelola_obat/KelolaObat.dart';
 import 'package:mobile_app_apotik_cirea/account.dart';
+import 'package:mobile_app_apotik_cirea/kelola_sampingan/KelolaSampingan.dart';
 import 'package:mobile_app_apotik_cirea/validate/LogoutValidate.dart';
 
 class Dashboard extends StatelessWidget {
@@ -255,13 +257,13 @@ class Dashboard extends StatelessWidget {
                       name2: 'Kelola semua hal terkait barang non medis',
                       cardIcon: Icons.shopping_bag_outlined,
                       cardColor: const Color.fromRGBO(255, 178, 44, 1),
-                      route: KelolaObat()),
+                      route: KelolaBarangNonMedis()),
                   CardSelector(
                       name1: 'Kelola Sampingan',
                       name2: 'Kelola semua hal terkait samping',
                       cardIcon: Icons.storefront_outlined,
                       cardColor: const Color.fromRGBO(64, 165, 120, 1),
-                      route: KelolaObat()),
+                      route: KelolaSampingan()),
                   const SizedBox(height: 30),
                   const Text(
                     'Lainnya',

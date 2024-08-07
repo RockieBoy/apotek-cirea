@@ -2,8 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
-class BarangMedis02 extends StatelessWidget {
-  BarangMedis02({super.key});
+class BarangNonMedis02 extends StatelessWidget {
+  BarangNonMedis02({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -46,7 +46,7 @@ class BarangMedis02 extends StatelessWidget {
                   
                   Center(
                     child: Image.asset(
-                      'assets/image/bigparacetamol.png',
+                      'assets/image/bigtermo.png',
                       width: 300,
                     ),
                   ),
@@ -72,7 +72,7 @@ class BarangMedis02 extends StatelessWidget {
                     children: [
                       Center(
                         child: Text(
-                          'Paracetamol',
+                          'Termometer',
                           style: TextStyle(
                             fontFamily: "Poppins",
                             fontSize: 30,
@@ -92,8 +92,10 @@ class BarangMedis02 extends StatelessWidget {
                         const Text('Detail Produk',style: TextStyle(fontSize: 20,fontFamily: "Poppins",fontWeight: FontWeight.bold),),
                         const SizedBox(height: 15,),
                         DetailRow(label: 'Jumlah', value: '8'),
-                        DetailRow(label: 'Tanggal Produksi', value: '02/05/24'),
-                        DetailRow(label: 'Tanggal Kadaluarsa', value: '02/05/26'),
+                        DetailRow(label: 'Tanggal Masuk', value: '02/05/24'),
+                        DetailRow(label: 'Tanggal Produksi', value: '01/05/24'),
+                        DetailRow(label: 'Jenis', value: 'Digital'),
+                        DetailRow(label: 'Tampilan Layar', value: 'LCD'),
                         DetailRow(label: 'Kategori', value: 'Barang'),
                         DetailRow(label: 'Nomor Batch', value: 'B215712'),
                         Row(

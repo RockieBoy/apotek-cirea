@@ -101,7 +101,7 @@ class Obat02 extends StatelessWidget {
                         ),
                         DetailRow(label: 'Jumlah', value: '8'),
                         DetailRow(label: 'Tanggal Produksi', value: '02/05/24'),
-                        DetailRow(label: 'Tanggal Kadalursa', value: '02/05/26'),
+                        DetailRow(label: 'Tanggal Kadaluarsa', value: '02/05/26'),
                         DetailRow(label: 'Kategori', value: 'Analgesik'),
                         DetailRow(label: 'Komposisi', value: 'Paracetamol 500 gram'),
                         DetailRow(label: 'Dosis', value: '1-2 tablet setiap 4-6 jam'),
@@ -146,7 +146,7 @@ class DetailRow extends StatelessWidget {
       child: Row(
         children: [
           Expanded(
-            flex: 2,
+            flex: 3,
             child: Text(label, style: const TextStyle(fontWeight: FontWeight.bold, fontFamily: "Poppins"))),
             Expanded(
               flex: 3,

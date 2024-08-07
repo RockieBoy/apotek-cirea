@@ -2,19 +2,19 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
-class BarangMedis02 extends StatelessWidget {
-  BarangMedis02({super.key});
+class BarangNonMedis01 extends StatelessWidget {
+  BarangNonMedis01({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromRGBO(207, 237, 57, 1),
+      backgroundColor: const Color.fromRGBO(50, 228, 191, 1),
       body: SingleChildScrollView(
         child: Column(
           children: <Widget>[
             // buat bagian atasnya atau appbar nya
             Container(
-              color: Color.fromRGBO(207, 237, 57, 1),
+              color: const Color.fromRGBO(50, 228, 191, 1),
               padding: const EdgeInsets.fromLTRB(16, 16, 16, 0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -46,7 +46,7 @@ class BarangMedis02 extends StatelessWidget {
                   
                   Center(
                     child: Image.asset(
-                      'assets/image/bigparacetamol.png',
+                      'assets/image/bigtermo.png',
                       width: 300,
                     ),
                   ),
@@ -72,7 +72,7 @@ class BarangMedis02 extends StatelessWidget {
                     children: [
                       Center(
                         child: Text(
-                          'Paracetamol',
+                          'Termometer',
                           style: TextStyle(
                             fontFamily: "Poppins",
                             fontSize: 30,
@@ -89,11 +89,13 @@ class BarangMedis02 extends StatelessWidget {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        const Text('Detail Produk',style: TextStyle(fontSize: 20,fontFamily: "Poppins",fontWeight: FontWeight.bold),),
+                        const Text('Detail Produk', style: TextStyle(fontSize: 20, fontFamily: "Poppins", fontWeight: FontWeight.bold),),
                         const SizedBox(height: 15,),
-                        DetailRow(label: 'Jumlah', value: '8'),
-                        DetailRow(label: 'Tanggal Produksi', value: '02/05/24'),
-                        DetailRow(label: 'Tanggal Kadaluarsa', value: '02/05/26'),
+                        DetailRow(label: 'Jumlah', value: '12'),
+                        DetailRow(label: 'Tanggal Masuk', value: '02/12/24'),
+                        DetailRow(label: 'Tanggal Produksi', value: '01/12/24'),
+                        DetailRow(label: 'Jenis', value: 'Digital'),
+                        DetailRow(label: 'Tampilan Layar', value: 'LCD'),
                         DetailRow(label: 'Kategori', value: 'Barang'),
                         DetailRow(label: 'Nomor Batch', value: 'B215712'),
                         Row(

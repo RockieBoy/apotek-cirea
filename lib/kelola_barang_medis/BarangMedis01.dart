@@ -93,7 +93,7 @@ class BarangMedis01 extends StatelessWidget {
                         const SizedBox(height: 15,),
                         DetailRow(label: 'Jumlah', value: '12'),
                         DetailRow(label: 'Tanggal Produksi', value: '02/12/24'),
-                        DetailRow(label: 'Tanggal Kadalursa', value: '02/12/26'),
+                        DetailRow(label: 'Tanggal Kadaluarsa', value: '02/12/26'),
                         DetailRow(label: 'Kategori', value: 'Barang'),
                         DetailRow(label: 'Nomor Batch', value: 'B215712'),
                         Row(
@@ -134,7 +134,7 @@ class DetailRow extends StatelessWidget {
       child: Row(
         children: [
           Expanded(
-            flex: 2,
+            flex: 3,
             child: Text(label, style: const TextStyle(fontWeight: FontWeight.bold, fontFamily: "Poppins"))),
             Expanded(
               flex: 3,

@@ -2,8 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
-class BarangMedis02 extends StatelessWidget {
-  BarangMedis02({super.key});
+class Sampingan02 extends StatelessWidget {
+  Sampingan02({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -46,7 +46,7 @@ class BarangMedis02 extends StatelessWidget {
                   
                   Center(
                     child: Image.asset(
-                      'assets/image/bigparacetamol.png',
+                      'assets/image/bigaqua.png',
                       width: 300,
                     ),
                   ),
@@ -72,7 +72,7 @@ class BarangMedis02 extends StatelessWidget {
                     children: [
                       Center(
                         child: Text(
-                          'Paracetamol',
+                          'Aqua',
                           style: TextStyle(
                             fontFamily: "Poppins",
                             fontSize: 30,
@@ -95,7 +95,7 @@ class BarangMedis02 extends StatelessWidget {
                         DetailRow(label: 'Tanggal Produksi', value: '02/05/24'),
                         DetailRow(label: 'Tanggal Kadaluarsa', value: '02/05/26'),
                         DetailRow(label: 'Kategori', value: 'Barang'),
-                        DetailRow(label: 'Nomor Batch', value: 'B215712'),
+                        DetailRow(label: 'Nomor Batch', value: 'C73849K'),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
