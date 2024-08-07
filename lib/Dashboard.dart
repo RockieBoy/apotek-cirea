@@ -1,7 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:mobile_app_apotik_cirea/KelolaObat.dart';
+import 'package:mobile_app_apotik_cirea/kelola_barang_medis/KelolaBarangMedis.dart';
+import 'package:mobile_app_apotik_cirea/kelola_obat/KelolaObat.dart';
 import 'package:mobile_app_apotik_cirea/account.dart';
 import 'package:mobile_app_apotik_cirea/validate/LogoutValidate.dart';
 
@@ -145,7 +146,6 @@ class Dashboard extends StatelessWidget {
                   const SizedBox(
                     height: 20,
                   ),
-                  Container(),
                 ],
               ),
             ),
@@ -249,7 +249,7 @@ class Dashboard extends StatelessWidget {
                       name2: 'Kelola semua hal terkait Barang Medis',
                       cardIcon: Icons.medical_services,
                       cardColor: const Color.fromRGBO(175, 71, 210, 1),
-                      route: KelolaObat()),
+                      route: KelolaBarangMedis()),
                   CardSelector(
                       name1: 'Kelola Barang Non Medis',
                       name2: 'Kelola semua hal terkait barang non medis',
@@ -332,7 +332,7 @@ class CardSelector extends StatelessWidget {
               },
               child: SizedBox(
                 width: double.infinity,
-                height: 75,
+                height: 85,
                 child: Padding(
                   padding: const EdgeInsets.only(left: 16, right: 16),
                   child: Row(
