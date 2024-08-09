@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:mobile_app_apotik_cirea/KontakSuplier.dart';
+import 'package:mobile_app_apotik_cirea/aktifitasGudang.dart';
 import 'package:mobile_app_apotik_cirea/kelola_barang_medis/KelolaBarangMedis.dart';
 import 'package:mobile_app_apotik_cirea/kelola_barang_non_medis/KelolaBarangNonMedis.dart';
 import 'package:mobile_app_apotik_cirea/kelola_obat/KelolaObat.dart';
@@ -279,13 +281,13 @@ class Dashboard extends StatelessWidget {
                       name2: 'Tinjau Aktifitas gudang',
                       cardIcon: Icons.store,
                       cardColor: const Color.fromRGBO(16, 203, 0, 1),
-                      route: KelolaObat()),
+                      route: AktifitasGudang()),
                   CardSelector(
                       name1: 'Kontak Supplier',
                       name2: 'Hubungi Supplier',
                       cardIcon: Icons.perm_contact_calendar,
                       cardColor: const Color.fromRGBO(5, 12, 156, 1),
-                      route: KelolaObat()),
+                      route: KontakSuplier()),
                   const SizedBox(height: 50),
                 ],
               ),
