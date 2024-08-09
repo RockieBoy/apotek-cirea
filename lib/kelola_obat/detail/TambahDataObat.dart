@@ -1,10 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:mobile_app_apotik_cirea/kelola_sampingan/DetailSampingan.dart';
-import 'package:mobile_app_apotik_cirea/kelola_sampingan/detail/sampinganvalidate/SampinganCreateValidate.dart';
+import 'package:mobile_app_apotik_cirea/kelola_obat/DetailObat.dart';
+import 'package:mobile_app_apotik_cirea/kelola_obat/detail/obatvalidate/obatCreateValidate.dart';
 
-class TambahDataSampinganDetail extends StatelessWidget {
+class TambahDataObatDetail extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,7 +22,7 @@ class TambahDataSampinganDetail extends StatelessWidget {
                     onPressed: () {
                       Navigator.pushReplacement(context,
                           MaterialPageRoute(builder: (context) {
-                        return DetailSampingan();
+                        return DetailObat();
                       }));
                     },
                   ),
@@ -30,7 +30,7 @@ class TambahDataSampinganDetail extends StatelessWidget {
               ),
             ),
             const Text(
-              'Sampingan',
+              'Obat',
               style: TextStyle(
                 fontFamily: "Poppins",
                 fontSize: 30,
@@ -152,6 +152,121 @@ class TambahDataSampinganDetail extends StatelessWidget {
                           ),
                         ),
                       ),
+                      const SizedBox(
+                        height: 15,
+                      ),
+                      const Text(
+                        'Komposisi :',
+                        style: TextStyle(
+                          fontFamily: "Poppins",
+                          fontSize: 15,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.black,
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 15,
+                      ),
+                      TextField(
+                        decoration: InputDecoration(
+                          hintText: 'Komposisi',
+                          border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(10.0),
+                          ),
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 15,
+                      ),
+                      const Text(
+                        'Indikasi :',
+                        style: TextStyle(
+                          fontFamily: "Poppins",
+                          fontSize: 15,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.black,
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 15,
+                      ),
+                      TextField(
+                        decoration: InputDecoration(
+                          hintText: 'Indikasi',
+                          border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(10.0),
+                          ),
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 15,
+                      ),
+                      const Text(
+                        'Kontradiksi :',
+                        style: TextStyle(
+                          fontFamily: "Poppins",
+                          fontSize: 15,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.black,
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 15,
+                      ),
+                      TextField(
+                        decoration: InputDecoration(
+                          hintText: 'Kontradiksi',
+                          border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(10.0),
+                          ),
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 15,
+                      ),
+                      const Text(
+                        'Nomor Batch :',
+                        style: TextStyle(
+                          fontFamily: "Poppins",
+                          fontSize: 15,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.black,
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 15,
+                      ),
+                      TextField(
+                        decoration: InputDecoration(
+                          hintText: 'Nomor Batch',
+                          border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(10.0),
+                          ),
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 15,
+                      ),
+                      const Text(
+                        'Bentuk Ketersediaan :',
+                        style: TextStyle(
+                          fontFamily: "Poppins",
+                          fontSize: 15,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.black,
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 15,
+                      ),
+                      TextField(
+                        decoration: InputDecoration(
+                          hintText: 'Bentuk Ketersediaan',
+                          border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(10.0),
+                          ),
+                        ),
+                      ),
                     ],
                   ),
                   const SizedBox(height: 20),
@@ -167,7 +282,7 @@ class TambahDataSampinganDetail extends StatelessWidget {
                       onPressed: () {
                         Navigator.pushReplacement(context,
                             MaterialPageRoute(builder: (context) {
-                          return const DSampinganCreateValidate();
+                          return const DObatCreateValidate();
                         }));
                       },
                       child: const Text(

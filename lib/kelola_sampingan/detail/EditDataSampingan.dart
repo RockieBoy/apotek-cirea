@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:mobile_app_apotik_cirea/kelola_sampingan/DetailSampingan.dart';
 import 'package:mobile_app_apotik_cirea/kelola_sampingan/detail/sampinganvalidate/SampinganEditValidate.dart';
 
 class EditDataSampinganDetail extends StatelessWidget {
@@ -19,7 +20,10 @@ class EditDataSampinganDetail extends StatelessWidget {
                   child: IconButton(
                     icon: const Icon(Icons.arrow_back_ios_new, color: Colors.white ),
                     onPressed: () {
-                      Navigator.pop(context);
+                      Navigator.pushReplacement(context,
+                          MaterialPageRoute(builder: (context) {
+                        return DetailSampingan();
+                      }));
                     },
                   ),
                 ),

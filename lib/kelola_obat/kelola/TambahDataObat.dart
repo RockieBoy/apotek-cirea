@@ -1,10 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:mobile_app_apotik_cirea/kelola_sampingan/KelolaSampingan.dart';
-import 'package:mobile_app_apotik_cirea/kelola_sampingan/kelola/sampinganvalidate/SampinganCreateValidate.dart';
+import 'package:mobile_app_apotik_cirea/kelola_obat/KelolaObat.dart';
+import 'package:mobile_app_apotik_cirea/kelola_obat/kelola/obatvalidate/obatCreateValidate.dart';
 
-class TambahDataSampingan extends StatelessWidget {
+
+class TambahDataObat extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,7 +23,7 @@ class TambahDataSampingan extends StatelessWidget {
                     onPressed: () {
                       Navigator.pushReplacement(context,
                           MaterialPageRoute(builder: (context) {
-                        return KelolaSampingan();
+                        return KelolaObat();
                       }));
                     },
                   ),
@@ -30,7 +31,7 @@ class TambahDataSampingan extends StatelessWidget {
               ),
             ),
             const Text(
-              'Sampingan',
+              'Obat',
               style: TextStyle(
                 fontFamily: "Poppins",
                 fontSize: 30,
@@ -96,7 +97,7 @@ class TambahDataSampingan extends StatelessWidget {
                       onPressed: () {
                         Navigator.pushReplacement(context,
                             MaterialPageRoute(builder: (context) {
-                          return SampinganCreateValidate();
+                          return ObatCreateValidate();
                         }));
                       },
                       child: const Text(

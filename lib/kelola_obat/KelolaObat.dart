@@ -1,9 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:mobile_app_apotik_cirea/Dashboard.dart';
 import 'package:mobile_app_apotik_cirea/account.dart';
 import 'package:mobile_app_apotik_cirea/kelola_obat/DetailObat.dart';
+import 'package:mobile_app_apotik_cirea/kelola_obat/kelola/EditDataObat.dart';
+import 'package:mobile_app_apotik_cirea/kelola_obat/kelola/TambahDataObat.dart';
 
 class KelolaObat extends StatelessWidget {
   KelolaObat({super.key});
@@ -17,7 +18,12 @@ class KelolaObat extends StatelessWidget {
         height: 80,
         child: FloatingActionButton(
           backgroundColor: const Color.fromRGBO(255, 222, 77, 1),
-          onPressed: (){},
+          onPressed: (){
+            Navigator.pushReplacement(context,
+                MaterialPageRoute(builder: (context) {
+              return TambahDataObat();
+            }));
+          },
           child: Padding(
             padding: const EdgeInsets.all(10.0),
             child: Image.asset('assets/image/circleplus.png'),
@@ -180,7 +186,7 @@ class KelolaObat extends StatelessWidget {
                           const AssetImage('assets/image/paracetamol.png'),
                       cardColor: Colors.blue,
                       route: DetailObat(),
-                      editRoute: Dashboard()),
+                      editRoute: EditDataObat()),
                   const SizedBox(
                     height: 550,
                   ),

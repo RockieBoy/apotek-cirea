@@ -1,11 +1,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:mobile_app_apotik_cirea/Dashboard.dart';
 import 'package:mobile_app_apotik_cirea/account.dart';
 import 'package:mobile_app_apotik_cirea/kelola_obat/Obat01.dart';
 import 'package:mobile_app_apotik_cirea/kelola_obat/Obat02.dart';
 import 'package:mobile_app_apotik_cirea/kelola_obat/Obat03.dart';
+import 'package:mobile_app_apotik_cirea/kelola_obat/detail/EditDataObat.dart';
+import 'package:mobile_app_apotik_cirea/kelola_obat/detail/TambahDataObat.dart';
 
 class DetailObat extends StatelessWidget {
   DetailObat({super.key});
@@ -19,7 +20,12 @@ class DetailObat extends StatelessWidget {
         height: 80,
         child: FloatingActionButton(
           backgroundColor: const Color.fromRGBO(255, 222, 77, 1),
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pushReplacement(context,
+                MaterialPageRoute(builder: (context) {
+              return TambahDataObatDetail();
+            }));
+          },
           child: Padding(
             padding: const EdgeInsets.all(10.0),
             child: Image.asset('assets/image/circleplus.png'),
@@ -171,7 +177,7 @@ class DetailObat extends StatelessWidget {
                           const AssetImage('assets/image/paracetamol.png'),
                       cardColor: const Color.fromRGBO(50, 228, 191, 1),
                       route: Obat01(),
-                      editRoute: Dashboard()),
+                      editRoute:EditDataObatDetail()),
                   CardSelector(
                       name1: 'Paracetamol',
                       name2: '02/05/24 - 02/05/26',
@@ -180,7 +186,7 @@ class DetailObat extends StatelessWidget {
                           const AssetImage('assets/image/paracetamol.png'),
                       cardColor: Color.fromRGBO(207, 237, 57, 1),
                       route: Obat02(),
-                      editRoute: Dashboard()),
+                      editRoute:EditDataObatDetail()),
                   CardSelector(
                       name1: 'Paracetamol',
                       name2: '02/07/24 - 02/07/26',
@@ -189,7 +195,7 @@ class DetailObat extends StatelessWidget {
                           const AssetImage('assets/image/paracetamol.png'),
                       cardColor: Color.fromRGBO(255, 178, 44, 1),
                       route: Obat03(),
-                      editRoute: Dashboard()),
+                      editRoute:EditDataObatDetail()),
                   const SizedBox(
                     height: 550,
                   ),
