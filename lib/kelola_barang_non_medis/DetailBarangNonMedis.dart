@@ -1,10 +1,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:mobile_app_apotik_cirea/Dashboard.dart';
 import 'package:mobile_app_apotik_cirea/account.dart';
 import 'package:mobile_app_apotik_cirea/kelola_barang_non_medis/BarangNonMedis01.dart';
 import 'package:mobile_app_apotik_cirea/kelola_barang_non_medis/BarangNonMedis02.dart';
+import 'package:mobile_app_apotik_cirea/kelola_barang_non_medis/KelolaBarangNonMedis.dart';
+import 'package:mobile_app_apotik_cirea/kelola_barang_non_medis/detail/EditDataBarangNonMedis.dart';
+import 'package:mobile_app_apotik_cirea/kelola_barang_non_medis/detail/TambahDataBarangNonMedis.dart';
 
 class DetailBarangNonMedis extends StatelessWidget {
   DetailBarangNonMedis({super.key});
@@ -18,7 +20,11 @@ class DetailBarangNonMedis extends StatelessWidget {
         height: 80,
         child: FloatingActionButton(
           backgroundColor: const Color.fromRGBO(255, 222, 77, 1),
-          onPressed: () {},
+          onPressed: () {
+            Navigator.push(context, MaterialPageRoute(builder: (context) {
+              return TambahDataBarangNonMedisDetail();
+            }));
+          },
           child: Padding(
             padding: const EdgeInsets.all(10.0),
             child: Image.asset('assets/image/circleplus.png'),
@@ -48,7 +54,10 @@ class DetailBarangNonMedis extends StatelessWidget {
                             children: [
                               IconButton(
                                   onPressed: () {
-                                    Navigator.pop(context);
+                                    Navigator.push(context,
+                                        MaterialPageRoute(builder: (context) {
+                                        return KelolaBarangNonMedis();
+                                    }));
                                   },
                                   icon: const Icon(
                                     Icons.arrow_back_ios,
@@ -170,7 +179,7 @@ class DetailBarangNonMedis extends StatelessWidget {
                           const AssetImage('assets/image/termo.png'),
                       cardColor: const Color.fromRGBO(50, 228, 191, 1),
                       route: BarangNonMedis01(),
-                      editRoute: Dashboard()),
+                      editRoute: EditDataBarangNonMedisDetail()),
                   CardSelector(
                       name1: 'Termometer',
                       name2: '02/05/24',
@@ -179,7 +188,7 @@ class DetailBarangNonMedis extends StatelessWidget {
                           const AssetImage('assets/image/termo.png'),
                       cardColor: Color.fromRGBO(207, 237, 57, 1),
                       route: BarangNonMedis02(),
-                      editRoute: Dashboard()),
+                      editRoute: EditDataBarangNonMedisDetail()),
                   const SizedBox(
                     height: 550,
                   ),

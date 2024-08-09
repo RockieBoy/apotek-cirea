@@ -1,14 +1,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:mobile_app_apotik_cirea/kelola_barang_medis/detail/BarangMedisvalidate/BarangMedisEditSuccess.dart';
-import 'package:mobile_app_apotik_cirea/kelola_barang_medis/detail/EditDataBarangMedis.dart';
+import 'package:mobile_app_apotik_cirea/kelola_barang_non_medis/kelola/BarangNonMedisvalidate/BarangNonMedisEditSuccess.dart';
+import 'package:mobile_app_apotik_cirea/kelola_barang_non_medis/kelola/TambahDataBarangNonMedis.dart';
 
 
-
-
-class DBarangMedisEditValidate extends StatelessWidget {
-  const DBarangMedisEditValidate({super.key});
+class BarangNonMedisEditValidate extends StatelessWidget {
+  const BarangNonMedisEditValidate({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +19,7 @@ class DBarangMedisEditValidate extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 const Text(
-                  'Barang Medis',
+                  'Barang Non Medis',
                   style: TextStyle(
                     fontSize: 30,
                     fontWeight: FontWeight.bold,
@@ -67,7 +65,7 @@ class DBarangMedisEditValidate extends StatelessWidget {
                     onPressed: () {
                       Navigator.pushReplacement(context,
                           MaterialPageRoute(builder: (context) {
-                        return DBarangMedisSuccessEdit();
+                        return BarangNonMedisSuccessEdit();
                       }));
                     },
                     child: const Text(
@@ -94,7 +92,7 @@ class DBarangMedisEditValidate extends StatelessWidget {
                     onPressed: () {
                       Navigator.pushReplacement(context,
                           MaterialPageRoute(builder: (context) {
-                        return EditDataBarangMedisDetail();
+                        return TambahDataBarangNonMedis();
                       }));
                     },
                     child: const Text(
