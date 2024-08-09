@@ -2,6 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:mobile_app_apotik_cirea/Dashboard.dart';
+import 'package:mobile_app_apotik_cirea/kelola_sampingan/kelola/EditDataSampingan.dart';
+import 'package:mobile_app_apotik_cirea/kelola_sampingan/kelola/TambahDataSampingan.dart';
 import 'package:mobile_app_apotik_cirea/account.dart';
 import 'package:mobile_app_apotik_cirea/kelola_sampingan/DetailSampingan.dart';
 
@@ -17,7 +19,11 @@ class KelolaSampingan extends StatelessWidget {
         height: 80,
         child: FloatingActionButton(
           backgroundColor: const Color.fromRGBO(255, 222, 77, 1),
-          onPressed: (){},
+          onPressed: (){
+            Navigator.push(context, MaterialPageRoute(builder: (context) {
+              return TambahDataSampingan();
+            }));
+          },
           child: Padding(
             padding: const EdgeInsets.all(10.0),
             child: Image.asset('assets/image/circleplus.png'),
@@ -46,7 +52,10 @@ class KelolaSampingan extends StatelessWidget {
                             children: [
                               IconButton(
                                   onPressed: () {
-                                    Navigator.pop(context);
+                                    Navigator.pushReplacement(context,
+                                        MaterialPageRoute(builder: (context) {
+                                      return Dashboard();
+                                    }));
                                   },
                                   icon: const Icon(
                                     Icons.arrow_back_ios,
@@ -180,7 +189,7 @@ class KelolaSampingan extends StatelessWidget {
                           const AssetImage('assets/image/aqua.png'),
                       cardColor: Colors.blue,
                       route: DetailSampingan(),
-                      editRoute: Dashboard()),
+                      editRoute: EditDataSampingan()),
                   const SizedBox(
                     height: 550,
                   ),

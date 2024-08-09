@@ -1,10 +1,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:mobile_app_apotik_cirea/Dashboard.dart';
 import 'package:mobile_app_apotik_cirea/account.dart';
+import 'package:mobile_app_apotik_cirea/kelola_sampingan/KelolaSampingan.dart';
 import 'package:mobile_app_apotik_cirea/kelola_sampingan/Sampingan01.dart';
 import 'package:mobile_app_apotik_cirea/kelola_sampingan/Sampingan02.dart';
+import 'package:mobile_app_apotik_cirea/kelola_sampingan/detail/EditDataSampingan.dart';
+import 'package:mobile_app_apotik_cirea/kelola_sampingan/detail/TambahDataSampingan.dart';
 
 class DetailSampingan extends StatelessWidget {
   DetailSampingan({super.key});
@@ -18,7 +20,11 @@ class DetailSampingan extends StatelessWidget {
         height: 80,
         child: FloatingActionButton(
           backgroundColor: const Color.fromRGBO(255, 222, 77, 1),
-          onPressed: () {},
+          onPressed: () {
+            Navigator.push(context, MaterialPageRoute(builder: (context) {
+              return TambahDataSampinganDetail();
+            }));
+          },
           child: Padding(
             padding: const EdgeInsets.all(10.0),
             child: Image.asset('assets/image/circleplus.png'),
@@ -48,7 +54,10 @@ class DetailSampingan extends StatelessWidget {
                             children: [
                               IconButton(
                                   onPressed: () {
-                                    Navigator.pop(context);
+                                    Navigator.pushReplacement(context,
+                                        MaterialPageRoute(builder: (context) {
+                                      return KelolaSampingan();
+                                    }));
                                   },
                                   icon: const Icon(
                                     Icons.arrow_back_ios,
@@ -170,7 +179,7 @@ class DetailSampingan extends StatelessWidget {
                           const AssetImage('assets/image/aqua.png'),
                       cardColor: const Color.fromRGBO(50, 228, 191, 1),
                       route: Sampingan01(),
-                      editRoute: Dashboard()),
+                      editRoute: EditDataSampinganDetail()),
                   CardSelector(
                       name1: 'Aqua',
                       name2: '02/07/24',
@@ -179,7 +188,7 @@ class DetailSampingan extends StatelessWidget {
                           const AssetImage('assets/image/aqua.png'),
                       cardColor: Color.fromRGBO(207, 237, 57, 1),
                       route: Sampingan02(),
-                      editRoute: Dashboard()),
+                      editRoute: EditDataSampinganDetail()),
                   const SizedBox(
                     height: 550,
                   ),

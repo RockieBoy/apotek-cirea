@@ -1,8 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:mobile_app_apotik_cirea/kelola_sampingan/KelolaSampingan.dart';
 
-class SuccessEdit extends StatelessWidget {
+class SampinganSuccessCreate extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -38,7 +39,7 @@ class SuccessEdit extends StatelessWidget {
                     width: 150,
                   ),
                   const Text(
-                    'Data Berhasil Diubah!',
+                    'Data Berhasil Dibuat!',
                     style: TextStyle(
                       fontFamily: "Poppins",
                       fontSize: 15,
@@ -47,26 +48,22 @@ class SuccessEdit extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 20),
-                  Center(
+                  Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 8.0),
                     child: ElevatedButton(
-                      onPressed: () {
-                        
-                      },
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: const Color.fromRGBO(16, 203, 0, 1),
-                        padding: const EdgeInsets.symmetric(
-                            horizontal: 80, vertical: 10),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10),
-                        ),
+                        backgroundColor:const Color.fromRGBO(16, 203, 0, 1),
+                        minimumSize: const Size(double.infinity, 50),
                       ),
+                      onPressed: () {
+                        Navigator.pushReplacement(context,
+                            MaterialPageRoute(builder: (context) {
+                          return KelolaSampingan();
+                        }));
+                      },
                       child: const Text(
-                        'Kembali',
-                        style: TextStyle(
-                            fontFamily: "Poppins",
-                            fontSize: 25,
-                            fontWeight: FontWeight.w900,
-                            color: Colors.white),
+                        "KEMBALI",
+                        style: TextStyle(color: Colors.white, fontFamily: "Poppins", fontSize: 20, fontWeight: FontWeight.bold),
                       ),
                     ),
                   ),
@@ -80,3 +77,4 @@ class SuccessEdit extends StatelessWidget {
     );
   }
 }
+
