@@ -4,6 +4,8 @@ import 'package:flutter/widgets.dart';
 import 'package:mobile_app_apotik_cirea/Dashboard.dart';
 import 'package:mobile_app_apotik_cirea/account.dart';
 import 'package:mobile_app_apotik_cirea/kelola_barang_medis/DetailbarangMedis.dart';
+import 'package:mobile_app_apotik_cirea/kelola_barang_medis/kelola/EditDataBarangMedis.dart';
+import 'package:mobile_app_apotik_cirea/kelola_barang_medis/kelola/TambahDataBarangMedis.dart';
 
 class KelolaBarangMedis extends StatelessWidget {
   KelolaBarangMedis({super.key});
@@ -17,7 +19,12 @@ class KelolaBarangMedis extends StatelessWidget {
         height: 80,
         child: FloatingActionButton(
           backgroundColor: const Color.fromRGBO(255, 222, 77, 1),
-          onPressed: (){},
+          onPressed: (){
+            Navigator.pushReplacement(context,
+                MaterialPageRoute(builder: (context) {
+              return TambahDataBarangMedis();
+            }));
+          },
           child: Padding(
             padding: const EdgeInsets.all(10.0),
             child: Image.asset('assets/image/circleplus.png'),
@@ -46,7 +53,10 @@ class KelolaBarangMedis extends StatelessWidget {
                             children: [
                               IconButton(
                                   onPressed: () {
-                                    Navigator.pop(context);
+                                    Navigator.pushReplacement(context,
+                                        MaterialPageRoute(builder: (context) {
+                                      return Dashboard();
+                                    }));
                                   },
                                   icon: const Icon(
                                     Icons.arrow_back_ios,
@@ -180,7 +190,7 @@ class KelolaBarangMedis extends StatelessWidget {
                           const AssetImage('assets/image/suntikan.png'),
                       cardColor: Colors.blue,
                       route: DetailBarangMedis(),
-                      editRoute: Dashboard()),
+                      editRoute: EditDataBarangMedis()),
                   const SizedBox(
                     height: 550,
                   ),

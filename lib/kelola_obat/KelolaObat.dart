@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:mobile_app_apotik_cirea/Dashboard.dart';
 import 'package:mobile_app_apotik_cirea/account.dart';
 import 'package:mobile_app_apotik_cirea/kelola_obat/DetailObat.dart';
 import 'package:mobile_app_apotik_cirea/kelola_obat/kelola/EditDataObat.dart';
@@ -52,7 +53,10 @@ class KelolaObat extends StatelessWidget {
                             children: [
                               IconButton(
                                   onPressed: () {
-                                    Navigator.pop(context);
+                                    Navigator.pushReplacement(context,
+                                        MaterialPageRoute(builder: (context) {
+                                      return Dashboard();
+                                    }));
                                   },
                                   icon: const Icon(
                                     Icons.arrow_back_ios,

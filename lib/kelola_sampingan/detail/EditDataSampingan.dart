@@ -100,7 +100,7 @@ class EditDataSampinganDetail extends StatelessWidget {
                       ),
                       TextField(
                         decoration: InputDecoration(
-                          hintText: 'Tanggal Produksi',
+                          hintText: 'DD/MM/YYYY',
                           suffixIcon: Icon(Icons.date_range_outlined),
                           border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(10.0),
@@ -124,7 +124,7 @@ class EditDataSampinganDetail extends StatelessWidget {
                       ),
                       TextField(
                         decoration: InputDecoration(
-                          hintText: 'Tanggal Kadaluarsa',
+                          hintText: 'DD/MM/YYYY',
                           suffixIcon: Icon(Icons.date_range_outlined),
                           border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(10.0),

@@ -1,11 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:mobile_app_apotik_cirea/kelola_obat/DetailObat.dart';
-import 'package:mobile_app_apotik_cirea/kelola_obat/detail/obatvalidate/obatEditValidate.dart';
+import 'package:mobile_app_apotik_cirea/kelola_barang_medis/DetailbarangMedis.dart';
+import 'package:mobile_app_apotik_cirea/kelola_barang_medis/detail/BarangMedisvalidate/BarangMedisCreateValidate.dart';
 
 
-class EditDataObatDetail extends StatelessWidget {
+class TambahDataBarangMedisDetail extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,7 +23,7 @@ class EditDataObatDetail extends StatelessWidget {
                     onPressed: () {
                       Navigator.pushReplacement(context,
                           MaterialPageRoute(builder: (context) {
-                        return DetailObat();
+                        return DetailBarangMedis();
                       }));
                     },
                   ),
@@ -31,7 +31,7 @@ class EditDataObatDetail extends StatelessWidget {
               ),
             ),
             const Text(
-              'Obat',
+              'Barang Medis',
               style: TextStyle(
                 fontFamily: "Poppins",
                 fontSize: 30,
@@ -39,7 +39,7 @@ class EditDataObatDetail extends StatelessWidget {
                 color: Colors.white,
               ),
             ),
-            const SizedBox(height: 50),
+            const SizedBox(height: 30),
             Container(
               margin: const EdgeInsets.fromLTRB(20,40,20,40),
               padding: const EdgeInsets.all(16.0),
@@ -52,7 +52,7 @@ class EditDataObatDetail extends StatelessWidget {
                 children: <Widget>[
                   const SizedBox(height: 15,),
                   const Text(
-                    'Edit Data',
+                    'Tambah Data',
                     style: TextStyle(
                       fontFamily: "Poppins",
                       fontSize: 25,
@@ -73,9 +73,7 @@ class EditDataObatDetail extends StatelessWidget {
                           color: Colors.black,
                         ),
                       ),
-                      const SizedBox(
-                        height: 15,
-                      ),
+                      const SizedBox(height: 15,),
                       TextField(
                         decoration: InputDecoration(
                           hintText: 'Jumlah',
@@ -159,75 +157,6 @@ class EditDataObatDetail extends StatelessWidget {
                         height: 15,
                       ),
                       const Text(
-                        'Komposisi :',
-                        style: TextStyle(
-                          fontFamily: "Poppins",
-                          fontSize: 15,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.black,
-                        ),
-                      ),
-                      const SizedBox(
-                        height: 15,
-                      ),
-                      TextField(
-                        decoration: InputDecoration(
-                          hintText: 'Komposisi',
-                          border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(10.0),
-                          ),
-                        ),
-                      ),
-                      const SizedBox(
-                        height: 15,
-                      ),
-                      const Text(
-                        'Indikasi :',
-                        style: TextStyle(
-                          fontFamily: "Poppins",
-                          fontSize: 15,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.black,
-                        ),
-                      ),
-                      const SizedBox(
-                        height: 15,
-                      ),
-                      TextField(
-                        decoration: InputDecoration(
-                          hintText: 'Indikasi',
-                          border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(10.0),
-                          ),
-                        ),
-                      ),
-                      const SizedBox(
-                        height: 15,
-                      ),
-                      const Text(
-                        'Kontradiksi :',
-                        style: TextStyle(
-                          fontFamily: "Poppins",
-                          fontSize: 15,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.black,
-                        ),
-                      ),
-                      const SizedBox(
-                        height: 15,
-                      ),
-                      TextField(
-                        decoration: InputDecoration(
-                          hintText: 'Kontradiksi',
-                          border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(10.0),
-                          ),
-                        ),
-                      ),
-                      const SizedBox(
-                        height: 15,
-                      ),
-                      const Text(
                         'Nomor Batch :',
                         style: TextStyle(
                           fontFamily: "Poppins",
@@ -242,29 +171,6 @@ class EditDataObatDetail extends StatelessWidget {
                       TextField(
                         decoration: InputDecoration(
                           hintText: 'Nomor Batch',
-                          border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(10.0),
-                          ),
-                        ),
-                      ),
-                      const SizedBox(
-                        height: 15,
-                      ),
-                      const Text(
-                        'Bentuk Ketersediaan :',
-                        style: TextStyle(
-                          fontFamily: "Poppins",
-                          fontSize: 15,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.black,
-                        ),
-                      ),
-                      const SizedBox(
-                        height: 15,
-                      ),
-                      TextField(
-                        decoration: InputDecoration(
-                          hintText: 'Bentuk Ketersediaan',
                           border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(10.0),
                           ),
@@ -285,11 +191,11 @@ class EditDataObatDetail extends StatelessWidget {
                       onPressed: () {
                         Navigator.pushReplacement(context,
                             MaterialPageRoute(builder: (context) {
-                          return DObatEditValidate();
+                          return const DBarangMedisCreateValidate();
                         }));
                       },
                       child: const Text(
-                        "Edit Data",
+                        "Tambah Data",
                         style: TextStyle(color: Colors.white, fontFamily: "Poppins", fontSize: 20, fontWeight: FontWeight.bold),
                       ),
                     ),

@@ -1,10 +1,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:mobile_app_apotik_cirea/kelola_sampingan/DetailSampingan.dart';
-import 'package:mobile_app_apotik_cirea/kelola_sampingan/detail/sampinganvalidate/SampinganCreateValidate.dart';
+import 'package:mobile_app_apotik_cirea/kelola_barang_medis/KelolaBarangMedis.dart';
+import 'package:mobile_app_apotik_cirea/kelola_barang_medis/kelola/BarangMedisvalidate/BarangMedisCreateValidate.dart';
 
-class TambahDataSampinganDetail extends StatelessWidget {
+
+
+class TambahDataBarangMedis extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,7 +24,7 @@ class TambahDataSampinganDetail extends StatelessWidget {
                     onPressed: () {
                       Navigator.pushReplacement(context,
                           MaterialPageRoute(builder: (context) {
-                        return DetailSampingan();
+                        return KelolaBarangMedis();
                       }));
                     },
                   ),
@@ -30,7 +32,7 @@ class TambahDataSampinganDetail extends StatelessWidget {
               ),
             ),
             const Text(
-              'Sampingan',
+              'Barang Medis',
               style: TextStyle(
                 fontFamily: "Poppins",
                 fontSize: 30,
@@ -38,7 +40,7 @@ class TambahDataSampinganDetail extends StatelessWidget {
                 color: Colors.white,
               ),
             ),
-            const SizedBox(height: 30),
+            const SizedBox(height: 50),
             Container(
               margin: const EdgeInsets.fromLTRB(20,40,20,40),
               padding: const EdgeInsets.all(16.0),
@@ -64,7 +66,7 @@ class TambahDataSampinganDetail extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       const Text(
-                        'Jumlah :',
+                        'Nama Item :',
                         style: TextStyle(
                           fontFamily: "Poppins",
                           fontSize: 15,
@@ -75,78 +77,7 @@ class TambahDataSampinganDetail extends StatelessWidget {
                       const SizedBox(height: 15,),
                       TextField(
                         decoration: InputDecoration(
-                          hintText: 'Jumlah',
-                          border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(10.0),
-                          ),
-                        ),
-                      ),
-                      const SizedBox(
-                        height: 15,
-                      ),
-                      const Text(
-                        'Tanggal Produksi :',
-                        style: TextStyle(
-                          fontFamily: "Poppins",
-                          fontSize: 15,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.black,
-                        ),
-                      ),
-                      const SizedBox(
-                        height: 15,
-                      ),
-                      TextField(
-                        decoration: InputDecoration(
-                          hintText: 'DD/MM/YYYY',
-                          suffixIcon: Icon(Icons.date_range_outlined),
-                          border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(10.0),
-                          ),
-                        ),
-                      ),
-                      const SizedBox(
-                        height: 15,
-                      ),
-                      const Text(
-                        'Tanggal Kadaluarsa :',
-                        style: TextStyle(
-                          fontFamily: "Poppins",
-                          fontSize: 15,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.black,
-                        ),
-                      ),
-                      const SizedBox(
-                        height: 15,
-                      ),
-                      TextField(
-                        decoration: InputDecoration(
-                          hintText: 'DD/MM/YYYY',
-                          suffixIcon: Icon(Icons.date_range_outlined),
-                          border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(10.0),
-                          ),
-                        ),
-                      ),
-                      const SizedBox(
-                        height: 15,
-                      ),
-                      const Text(
-                        'Kategori :',
-                        style: TextStyle(
-                          fontFamily: "Poppins",
-                          fontSize: 15,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.black,
-                        ),
-                      ),
-                      const SizedBox(
-                        height: 15,
-                      ),
-                      TextField(
-                        decoration: InputDecoration(
-                          hintText: 'Kategori',
+                          hintText: 'Nama Item',
                           border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(10.0),
                           ),
@@ -167,7 +98,7 @@ class TambahDataSampinganDetail extends StatelessWidget {
                       onPressed: () {
                         Navigator.pushReplacement(context,
                             MaterialPageRoute(builder: (context) {
-                          return const DSampinganCreateValidate();
+                          return BarangMedisCreateValidate();
                         }));
                       },
                       child: const Text(

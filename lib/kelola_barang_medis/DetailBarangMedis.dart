@@ -1,10 +1,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:mobile_app_apotik_cirea/Dashboard.dart';
 import 'package:mobile_app_apotik_cirea/account.dart';
 import 'package:mobile_app_apotik_cirea/kelola_barang_medis/BarangMedis01.dart';
 import 'package:mobile_app_apotik_cirea/kelola_barang_medis/BarangMedis02.dart';
+import 'package:mobile_app_apotik_cirea/kelola_barang_medis/KelolaBarangMedis.dart';
+import 'package:mobile_app_apotik_cirea/kelola_barang_medis/detail/EditDataBarangMedis.dart';
+import 'package:mobile_app_apotik_cirea/kelola_barang_medis/detail/TambahDataBarangMedis.dart';
 
 class DetailBarangMedis extends StatelessWidget {
   DetailBarangMedis({super.key});
@@ -18,7 +20,12 @@ class DetailBarangMedis extends StatelessWidget {
         height: 80,
         child: FloatingActionButton(
           backgroundColor: const Color.fromRGBO(255, 222, 77, 1),
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pushReplacement(context,
+                MaterialPageRoute(builder: (context) {
+              return TambahDataBarangMedisDetail();
+            }));
+          },
           child: Padding(
             padding: const EdgeInsets.all(10.0),
             child: Image.asset('assets/image/circleplus.png'),
@@ -48,7 +55,10 @@ class DetailBarangMedis extends StatelessWidget {
                             children: [
                               IconButton(
                                   onPressed: () {
-                                    Navigator.pop(context);
+                                    Navigator.pushReplacement(context,
+                                    MaterialPageRoute(builder: (context) {
+                                      return KelolaBarangMedis();
+                                      }));   
                                   },
                                   icon: const Icon(
                                     Icons.arrow_back_ios,
@@ -170,7 +180,7 @@ class DetailBarangMedis extends StatelessWidget {
                           const AssetImage('assets/image/suntikan.png'),
                       cardColor: const Color.fromRGBO(50, 228, 191, 1),
                       route: BarangMedis01(),
-                      editRoute: Dashboard()),
+                      editRoute: EditDataBarangMedisDetail()),
                   CardSelector(
                       name1: 'Suntikan',
                       name2: '02/05/24 - 02/05/26',
@@ -179,7 +189,7 @@ class DetailBarangMedis extends StatelessWidget {
                           const AssetImage('assets/image/suntikan.png'),
                       cardColor: Color.fromRGBO(207, 237, 57, 1),
                       route: BarangMedis02(),
-                      editRoute: Dashboard()),
+                      editRoute: EditDataBarangMedisDetail()),
                   const SizedBox(
                     height: 550,
                   ),
